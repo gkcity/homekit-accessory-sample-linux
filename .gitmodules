@@ -1,12 +1,16 @@
 [submodule "tiny"]
 	path = tiny
 	url = https://github.com/gkcity/tiny.git
+	branch = origin/master
 [submodule "tinyfx"]
 	path = tinyfx
 	url = https://github.com/gkcity/tinyfx.git
+	branch = origin/master
 [submodule "tinymdns"]
 	path = tinymdns
 	url = https://github.com/gkcity/tinymdns.git
+	branch = origin/master
 [submodule "tinycrypto"]
 	path = tinycrypto
 	url = https://github.com/gkcity/tinycrypto.git
+	branch = origin/master
