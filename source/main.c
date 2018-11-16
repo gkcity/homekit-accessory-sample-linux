@@ -1,6 +1,6 @@
 #include <tiny_socket.h>
 #include <tiny_snprintf.h>
-#include "device/definition/Switch.h"
+#include "device/definition/Lightbulb.h"
 #include "device/initializer/InitializeConfiguration.h"
 #include "DeviceStack.h"
 #include "DeviceMonitor.h"
@@ -21,7 +21,7 @@ int main(void)
     /**
      * 1. 初始化设备
      */
-    device = Switch(DID, NAME, IP, PIN);
+    device = Lightbulb(DID, NAME, IP, PIN);
     if (device == NULL)
     {
         return 0;

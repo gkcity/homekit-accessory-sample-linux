@@ -2,23 +2,23 @@
  * Copyright (C) 2013-2015
  *
  * @author jxfengzi@gmail.com
- * @date   2013-11-19
+ * @date   2018-11-12
  *
- * @file   P_1_7_HardwareRevision.h
+ * @file   P_1_7_FirmwareRevision.h
  *
  * @remark
  *
  */
 
-#include "P_1_7_HardwareRevision.h"
+#include "P_1_7_FirmwareRevision.h"
 
-Property * P_1_7_HardwareRevision(void)
+Property * P_1_7_FirmwareRevision(void)
 {
     Property *thiz = NULL;
 
     do
     {
-        thiz = Property_NewInstance(7, "homekit-spec", "hardware-revision", 0x00000053, NULL);
+        thiz = Property_NewInstance(7, "homekit-spec", "firmware-revision", 0x00000052, NULL);
         if (thiz == NULL)
         {
             break;

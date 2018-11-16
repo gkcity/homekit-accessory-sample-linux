@@ -2,7 +2,7 @@
 * Copyright (C) 2013-2015
 *
 * @author jxfengzi@gmail.com
-* @date   2013-11-19
+* @date   2018-11-12
 *
 * @file   OnPropertySet.c
 *
@@ -14,7 +14,7 @@
 #include "../iid/IID.h"
 #include "../print/PrintValue.h"
 #include "S_1_AccessoryInformation/S_1_AccessoryInformation_doSet.h"
-#include "S_2_Switch/S_2_Switch_doSet.h"
+#include "S_8_Lightbulb/S_8_Lightbulb_doSet.h"
 
 void OnPropertySet(PropertyOperation *o)
 {
@@ -27,8 +27,8 @@ void OnPropertySet(PropertyOperation *o)
             S_1_AccessoryInformation_doSet(o);
             break;
 
-        case IID_2_Switch:
-            S_2_Switch_doSet(o);
+        case IID_8_Lightbulb:
+            S_8_Lightbulb_doSet(o);
             break;
 
         default:

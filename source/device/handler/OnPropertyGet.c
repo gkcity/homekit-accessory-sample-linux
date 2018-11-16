@@ -2,7 +2,7 @@
 * Copyright (C) 2013-2015
 *
 * @author jxfengzi@gmail.com
-* @date   2013-11-19
+* @date   2018-11-12
 *
 * @file   OnPropertyGet.c
 *
@@ -13,7 +13,7 @@
 #include "OnPropertyGet.h"
 #include "../iid/IID.h"
 #include "S_1_AccessoryInformation/S_1_AccessoryInformation_doGet.h"
-#include "S_2_Switch/S_2_Switch_doGet.h"
+#include "S_8_Lightbulb/S_8_Lightbulb_doGet.h"
 
 void OnPropertyGet(PropertyOperation *o)
 {
@@ -25,8 +25,8 @@ void OnPropertyGet(PropertyOperation *o)
             S_1_AccessoryInformation_doGet(o);
             break;
 
-        case IID_2_Switch:
-            S_2_Switch_doGet(o);
+        case IID_8_Lightbulb:
+            S_8_Lightbulb_doGet(o);
             break;
 
         default:

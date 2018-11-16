@@ -2,23 +2,23 @@
  * Copyright (C) 2013-2015
  *
  * @author jxfengzi@gmail.com
- * @date   2013-11-19
+ * @date   2018-11-12
  *
- * @file   P_2_1_On.h
+ * @file   P_8_9_On.h
  *
  * @remark
  *
  */
 
-#include "P_2_1_On.h"
+#include "P_8_9_On.h"
 
-Property * P_2_1_On(void)
+Property * P_8_9_On(void)
 {
     Property *thiz = NULL;
 
     do
     {
-        thiz = Property_NewInstance(1, "homekit-spec", "on", 0x00000025, NULL);
+        thiz = Property_NewInstance(9, "homekit-spec", "on", 0x00000025, NULL);
         if (thiz == NULL)
         {
             break;

@@ -1,38 +1,32 @@
 #-----------------------------------------------------------------------------
 #
-# sample-lightbulb
+# lightbulb
 #
 #-----------------------------------------------------------------------------
 
-SET(DEVICE_SRC
-        device/definition/Switch.h
-        device/definition/Switch.c
+SET(SRC
+        device/definition/Lightbulb.h
+        device/definition/Lightbulb.c
         device/definition/S_1_AccessoryInformation.h
         device/definition/S_1_AccessoryInformation.c
-        device/definition/P_1_1_Identify.h
-        device/definition/P_1_1_Identify.c
-        device/definition/P_1_2_Manufacturer.h
-        device/definition/P_1_2_Manufacturer.c
-        device/definition/P_1_3_Model.h
-        device/definition/P_1_3_Model.c
-        device/definition/P_1_4_Name.h
-        device/definition/P_1_4_Name.c
-        device/definition/P_1_5_SerialNumber.h
-        device/definition/P_1_5_SerialNumber.c
-        device/definition/P_1_6_FirmwareRevision.h
-        device/definition/P_1_6_FirmwareRevision.c
-        device/definition/P_1_7_HardwareRevision.h
-        device/definition/P_1_7_HardwareRevision.c
-        device/definition/P_1_8_AccessoryFlags.h
-        device/definition/P_1_8_AccessoryFlags.c
-        device/definition/S_2_Switch.h
-        device/definition/S_2_Switch.c
-        device/definition/P_2_1_On.h
-        device/definition/P_2_1_On.c
-        device/definition/P_2_2_Name.h
-        device/definition/P_2_2_Name.c
-        device/handler/OnActionInvoke.h
-        device/handler/OnActionInvoke.c
+        device/definition/P_1_2_Identify.h
+        device/definition/P_1_2_Identify.c
+        device/definition/P_1_3_Manufacturer.h
+        device/definition/P_1_3_Manufacturer.c
+        device/definition/P_1_4_Model.h
+        device/definition/P_1_4_Model.c
+        device/definition/P_1_5_Name.h
+        device/definition/P_1_5_Name.c
+        device/definition/P_1_6_SerialNumber.h
+        device/definition/P_1_6_SerialNumber.c
+        device/definition/P_1_7_FirmwareRevision.h
+        device/definition/P_1_7_FirmwareRevision.c
+        device/definition/S_8_Lightbulb.h
+        device/definition/S_8_Lightbulb.c
+        device/definition/P_8_9_On.h
+        device/definition/P_8_9_On.c
+        device/definition/P_8_10_Brightness.h
+        device/definition/P_8_10_Brightness.c
         device/handler/OnPropertyGet.h
         device/handler/OnPropertyGet.c
         device/handler/OnPropertySet.h
@@ -41,24 +35,15 @@ SET(DEVICE_SRC
         device/handler/S_1_AccessoryInformation/S_1_AccessoryInformation_doGet.c
         device/handler/S_1_AccessoryInformation/S_1_AccessoryInformation_doSet.h
         device/handler/S_1_AccessoryInformation/S_1_AccessoryInformation_doSet.c
-        device/handler/S_1_AccessoryInformation/S_1_AccessoryInformation_doInvoke.h
-        device/handler/S_1_AccessoryInformation/S_1_AccessoryInformation_doInvoke.c
-        device/handler/S_2_Switch/S_2_Switch_doGet.h
-        device/handler/S_2_Switch/S_2_Switch_doGet.c
-        device/handler/S_2_Switch/S_2_Switch_doSet.h
-        device/handler/S_2_Switch/S_2_Switch_doSet.c
-        device/handler/S_2_Switch/S_2_Switch_doInvoke.h
-        device/handler/S_2_Switch/S_2_Switch_doInvoke.c
-        device/iid/IID.h
+        device/handler/S_8_Lightbulb/S_8_Lightbulb_doGet.h
+        device/handler/S_8_Lightbulb/S_8_Lightbulb_doGet.c
+        device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.h
+        device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.c
         device/initializer/AccessoryCategoryIdentifier.h
         device/initializer/InitializeConfiguration.h
         device/initializer/InitializeConfiguration.c
         device/print/PrintValue.h
         device/print/PrintValue.c
-        )
-
-SET(SRC
-        ${DEVICE_SRC}
         persistence/HapPersistenceImpl.h
         persistence/HapPersistenceImpl.c
         DeviceMonitor.h
@@ -70,5 +55,5 @@ SET(SRC
         main.c
         )
 
-ADD_EXECUTABLE(sample_lightbulb ${SRC})
-TARGET_LINK_LIBRARIES(sample_lightbulb ${DEPENDENCE_LIB})
+ADD_EXECUTABLE(lightbulb ${SRC})
+TARGET_LINK_LIBRARIES(lightbulb ${DEPENDENCE_LIB})

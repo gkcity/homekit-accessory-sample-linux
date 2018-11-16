@@ -2,24 +2,23 @@
  * Copyright (C) 2013-2015
  *
  * @author jxfengzi@gmail.com
- * @date   2013-11-19
+ * @date   2018-11-12
  *
- * @file   Switch.c
+ * @file   Lightbulb.c
  *
  * @remark
  *
  */
 
 #include <tiny_snprintf.h>
-#include "Switch.h"
-#include "S_1_AccessoryInformation.h"
-#include "S_2_Switch.h"
+#include "Lightbulb.h"
 #include "../handler/OnPropertySet.h"
-#include "../handler/OnActionInvoke.h"
 #include "../handler/OnPropertyGet.h"
 #include "../initializer/InitializeConfiguration.h"
+#include "S_1_AccessoryInformation.h"
+#include "S_8_Lightbulb.h"
 
-Device * Switch(const char *did, const char *name, const char *ip, const char *pin)
+Device * Lightbulb(const char *did, const char *name, const char *ip, const char *pin)
 {
     Device *thiz = NULL;
 
@@ -38,7 +37,7 @@ Device * Switch(const char *did, const char *name, const char *ip, const char *p
 
         thiz->onGet = OnPropertyGet;
         thiz->onSet = OnPropertySet;
-        thiz->onInvoke = OnActionInvoke;
+
 
         if (RET_FAILED(TinyList_AddTail(&thiz->services, S_1_AccessoryInformation())))
         {
@@ -47,7 +46,7 @@ Device * Switch(const char *did, const char *name, const char *ip, const char *p
             break;
         }
 
-        if (RET_FAILED(TinyList_AddTail(&thiz->services, S_2_Switch())))
+        if (RET_FAILED(TinyList_AddTail(&thiz->services, S_8_Lightbulb())))
         {
             Device_Delete(thiz);
             thiz = NULL;
