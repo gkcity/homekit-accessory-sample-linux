@@ -2,7 +2,7 @@
 #include <tiny_snprintf.h>
 #include "device/definition/Lightbulb.h"
 #include "device/initializer/InitializeConfiguration.h"
-#include "DeviceStack.h"
+#include "HomeKitStack.h"
 #include "DeviceMonitor.h"
 #include "CommandReader.h"
 
@@ -30,7 +30,7 @@ int main(void)
     /**
      * 2. 线程1： 启动协议栈，连接到服务器，等待控制指令并执行。
      */
-    StartDeviceStack(device, &port);
+    StartHomeKit(device, &port);
 
     /**
      * 3. 线程2： 监控设备数据，如果发生变化，则通过ipc端口通知服务器。
@@ -50,7 +50,7 @@ int main(void)
     /**
      * 6. 停止协议栈
      */
-    StopDeviceStack();
+    StopHomeKit();
 
     /**
      * 7. 删除设备，准备退出

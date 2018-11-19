@@ -4,7 +4,7 @@
  * @author jxfengzi@gmail.com
  * @date   2013-11-19
  *
- * @file   DeviceStack.c
+ * @file   HomeKitStack.c
  *
  * @remark
  *
@@ -15,10 +15,10 @@
 #include <IotLauncher.h>
 #include <HapServerRuntime.h>
 #include <TinyThread.h>
-#include "DeviceStack.h"
+#include "HomeKitStack.h"
 #include "persistence/HapPersistenceImpl.h"
 
-#define TAG "DeviceStack"
+#define TAG "HomeKitStack"
 
 static TinyThread *_thread = NULL;
 
@@ -31,7 +31,7 @@ static void _loop(void *param)
     }
 }
 
-TinyRet StartDeviceStack(Device *device, uint16_t *port)
+TinyRet StartHomeKit(Device *device, uint16_t *port)
 {
     TinyRet ret = TINY_RET_OK;
     IotLauncher *launcher = NULL;
@@ -82,7 +82,7 @@ TinyRet StartDeviceStack(Device *device, uint16_t *port)
     return ret;
 }
 
-TinyRet StopDeviceStack(void)
+TinyRet StopHomeKit(void)
 {
     TinyRet ret = TINY_RET_OK;
 

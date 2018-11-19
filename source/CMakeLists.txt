@@ -53,8 +53,8 @@ SET(SRC
         persistence/HapPersistenceImpl.c
         DeviceMonitor.h
         DeviceMonitor.c
-        DeviceStack.h
-        DeviceStack.c
+        HomeKitStack.h
+        HomeKitStack.c
         CommandReader.h
         CommandReader.c
         main.c
