@@ -10,13 +10,17 @@
 *
 */
 
+#include <status/HapStatus.h>
 #include "S_1_AccessoryInformation_doSet.h"
 #include "../../iid/IID.h"
 
 static void P_1_2_Identify_doSet(PropertyOperation *o)
 {
-}
+    // TODO: 执行写操作: o->value->data.boolean->value;
 
+    // 写属性成功
+    o->status = HAP_OK;
+}
 
 void S_1_AccessoryInformation_doSet(PropertyOperation *o)
 {
@@ -29,7 +33,7 @@ void S_1_AccessoryInformation_doSet(PropertyOperation *o)
             break;
 
         default:
-            o->status = -100;
+            o->status = HAP_RESOURCE_NOT_EXIST;
             break;
     }
 }

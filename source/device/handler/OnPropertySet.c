@@ -10,6 +10,7 @@
 *
 */
 
+#include <status/HapStatus.h>
 #include "OnPropertySet.h"
 #include "../iid/IID.h"
 #include "../print/PrintValue.h"
@@ -32,6 +33,7 @@ void OnPropertySet(PropertyOperation *o)
             break;
 
         default:
+            o->status = HAP_RESOURCE_NOT_EXIST;
             break;
     }
 }

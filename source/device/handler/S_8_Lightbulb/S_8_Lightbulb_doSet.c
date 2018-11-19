@@ -10,17 +10,25 @@
 *
 */
 
+#include <status/HapStatus.h>
 #include "S_8_Lightbulb_doSet.h"
 #include "../../iid/IID.h"
 
 static void P_8_9_On_doSet(PropertyOperation *o)
 {
+    // TODO: 执行写操作: o->value->data.boolean->value;
+
+    // 写属性成功
+    o->status = HAP_OK;
 }
 
 static void P_8_10_Brightness_doSet(PropertyOperation *o)
 {
-}
+    // TODO: 执行写操作: o->value->data.number->value.intValue;
 
+    // 写属性成功
+    o->status = HAP_OK;
+}
 
 void S_8_Lightbulb_doSet(PropertyOperation *o)
 {
@@ -37,7 +45,7 @@ void S_8_Lightbulb_doSet(PropertyOperation *o)
             break;
 
         default:
-            o->status = -100;
+            o->status = HAP_RESOURCE_NOT_EXIST;
             break;
     }
 }

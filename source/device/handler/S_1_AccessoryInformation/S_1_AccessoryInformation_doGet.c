@@ -10,32 +10,63 @@
 *
 */
 
+#include <status/HapStatus.h>
 #include "S_1_AccessoryInformation_doGet.h"
 #include "../../iid/IID.h"
 
 static void P_1_3_Manufacturer_doGet(PropertyOperation *o)
 {
-    // o->value = JsonValue_NewString("GeekCity");
+    // 格式: JsonValue_NewString(字符串)　
+    // 取值: 字符串，没有限制取值范围
+
+    o->value = JsonValue_NewString("tinyhap"); // TODO: 这里需要读到属性真正的值
+
+    // 读属性成功
+    o->status = HAP_OK;
 }
 
 static void P_1_4_Model_doGet(PropertyOperation *o)
 {
-    // o->value = JsonValue_NewString("GeekCity");
+    // 格式: JsonValue_NewString(字符串)　
+    // 取值: 字符串，没有限制取值范围
+
+    o->value = JsonValue_NewString("test"); // TODO: 这里需要读到属性真正的值
+
+    // 读属性成功
+    o->status = HAP_OK;
 }
 
 static void P_1_5_Name_doGet(PropertyOperation *o)
 {
-    // o->value = JsonValue_NewString("GeekCity");
+    // 格式: JsonValue_NewString(字符串)　
+    // 取值: 字符串，没有限制取值范围
+
+    o->value = JsonValue_NewString("hello"); // TODO: 这里需要读到属性真正的值
+
+    // 读属性成功
+    o->status = HAP_OK;
 }
 
 static void P_1_6_SerialNumber_doGet(PropertyOperation *o)
 {
-    // o->value = JsonValue_NewString("GeekCity");
+    // 格式: JsonValue_NewString(字符串)　
+    // 取值: 字符串，没有限制取值范围
+
+    o->value = JsonValue_NewString("20181119"); // TODO: 这里需要读到属性真正的值
+
+    // 读属性成功
+    o->status = HAP_OK;
 }
 
 static void P_1_7_FirmwareRevision_doGet(PropertyOperation *o)
 {
-    // o->value = JsonValue_NewString("GeekCity");
+    // 格式: JsonValue_NewString(字符串)　
+    // 取值: 字符串，没有限制取值范围
+
+    o->value = JsonValue_NewString("0.2.2"); // TODO: 这里需要读到属性真正的值
+
+    // 读属性成功
+    o->status = HAP_OK;
 }
 
 void S_1_AccessoryInformation_doGet(PropertyOperation *o)
@@ -65,7 +96,7 @@ void S_1_AccessoryInformation_doGet(PropertyOperation *o)
             break;
 
         default:
-            o->status = -100;
+            o->status = HAP_RESOURCE_NOT_EXIST;
             break;
     }
 }
