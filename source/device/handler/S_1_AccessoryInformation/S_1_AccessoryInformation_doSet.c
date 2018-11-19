@@ -22,6 +22,7 @@ static void P_1_2_Identify_doSet(PropertyOperation *o)
     o->status = HAP_OK;
 }
 
+
 void S_1_AccessoryInformation_doSet(PropertyOperation *o)
 {
     printf("S_1_AccessoryInformation_doSet: piid = [%d]\n", o->pid.iid);
