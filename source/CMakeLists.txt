@@ -4,7 +4,8 @@
 #
 #-----------------------------------------------------------------------------
 
-SET(SRC
+
+SET(DEVICE_SRC
         device/definition/Lightbulb.h
         device/definition/Lightbulb.c
         device/definition/S_1_AccessoryInformation.h
@@ -44,6 +45,10 @@ SET(SRC
         device/initializer/InitializeConfiguration.c
         device/print/PrintValue.h
         device/print/PrintValue.c
+        )
+
+SET(SRC
+        ${DEVICE_SRC}
         persistence/HapPersistenceImpl.h
         persistence/HapPersistenceImpl.c
         DeviceMonitor.h
