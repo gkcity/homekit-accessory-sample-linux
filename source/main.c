@@ -6,10 +6,10 @@
 #include "DeviceMonitor.h"
 #include "CommandReader.h"
 
-#define DID                 "1C:BE:EE:01:01:08"
-#define NAME                "OuyangSwitch"
+#define DID                 "1C:BE:EE:01:02:01"
+#define NAME                "demo"
 #define IP                  "10.0.1.29"
-#define PIN                 "031-45-154"
+#define SETUP_CODE          "031-45-154"
 
 int main(void)
 {
@@ -21,7 +21,7 @@ int main(void)
     /**
      * 1. 初始化设备
      */
-    device = Lightbulb(DID, NAME, IP, PIN);
+    device = Lightbulb(DID, NAME, IP, SETUP_CODE);
     if (device == NULL)
     {
         return 0;

@@ -40,7 +40,6 @@ SET(DEVICE_SRC
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doGet.c
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.h
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.c
-        device/initializer/AccessoryCategoryIdentifier.h
         device/initializer/InitializeConfiguration.h
         device/initializer/InitializeConfiguration.c
         device/print/PrintValue.h
