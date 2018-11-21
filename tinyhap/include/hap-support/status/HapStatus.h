@@ -21,16 +21,39 @@ TINY_BEGIN_DECLS
 typedef enum _HapStatus
 {
     HAP_OK = 0,
+
+    // Request denied due to insufficient privileges.
     HAP_REQUEST_DEFINED = -70401,
+
+    // Unable to communicate with requested service, e.g. the power to the accessory was turned off.
     HAP_UNABLE_COMMUNICATE = -70402,
+
+    // Resource is busy, try again.
     HAP_BUSY = -70403,
+
+    // Cannot write to read only characteristic.
     HAP_CANNOT_WRITE = -70404,
+
+    // Cannot read from a write only characteristic.
     HAP_CANNOT_READ = -70405,
+
+    // Notification is not supported for characteristic.
     HAP_CANNOT_NOTIFY = -70406,
+
+    // Out of resources to process request.
     HAP_OUT_OF_RESOURCES = -70407,
+
+    // Operation timed out.
     HAP_TIMEOUT = -70408,
+
+    // Resource does not exist.
     HAP_RESOURCE_NOT_EXIST = -70409,
+
+    // Accessory received an invalid value in a write request.
     HAP_INVALID_VALUE = -70410,
+
+    // Insufficient Authorization.
+    HAP_INSUFFICIENT_AUTHORIZATION = -70411,
 } HapStatus;
 
 
