@@ -11,7 +11,7 @@
 */
 
 #include "InitializeConfiguration.h"
-#include <device/config/AccessoryCategoryIdentifier.h>
+#include <product/config/AccessoryCategoryIdentifier.h>
 
 #define PRODUCT_ID          10006
 #define PRODUCT_VERSION     1
@@ -36,7 +36,7 @@ static void InitializeAccessoryConfiguration(AccessoryConfig *thiz, const char *
     thiz->protocolMinorVersion = 1;
 }
 
-void InitializeConfiguration(DeviceConfig *thiz, const char *did, const char *name, const char *ip, const char *setupCode)
+void InitializeConfiguration(ProductConfig *thiz, const char *did, const char *name, const char *ip, const char *setupCode)
 {
     strncpy(thiz->did, did, DEVICE_ID_LENGTH);
     strncpy(thiz->ip, ip, TINY_IP_LEN);

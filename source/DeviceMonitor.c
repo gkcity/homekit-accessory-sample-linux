@@ -14,6 +14,7 @@
 #include <TinyThread.h>
 #include <HttpClient.h>
 #include <JsonObject.h>
+#include <JsonValue.h>
 //#include <client/WebcmdClient.h>
 
 static TinyThread *_thread = NULL;

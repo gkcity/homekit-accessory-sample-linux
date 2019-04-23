@@ -13,12 +13,12 @@
 #ifndef __Lightbulb_H__
 #define __Lightbulb_H__
 
-#include <device/Device.h>
+#include <product/Product.h>
 
 TINY_BEGIN_DECLS
 
 
-Device * Lightbulb(const char *did, const char *name, const char *ip, const char *setupCode);
+Product * Lightbulb(const char *did, const char *name, const char *ip, const char *setupCode);
 
 
 TINY_END_DECLS

@@ -13,12 +13,12 @@
 #ifndef __HomeKitStack_H__
 #define __HomeKitStack_H__
 
-#include <device/Device.h>
+#include <product/Product.h>
 
 TINY_BEGIN_DECLS
 
 
-TinyRet StartHomeKit(Device *device, uint16_t *port);
+TinyRet StartHomeKit(Product *product, uint16_t *port);
 
 TinyRet StopHomeKit(void);
 

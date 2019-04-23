@@ -13,12 +13,12 @@
 #ifndef __InitializeConfiguration_H__
 #define __InitializeConfiguration_H__
 
-#include <device/config/DeviceConfig.h>
+#include <product/config/ProductConfig.h>
 
 TINY_BEGIN_DECLS
 
 
-void InitializeConfiguration(DeviceConfig *thiz, const char *did, const char *name, const char *ip, const char *setupCode);
+void InitializeConfiguration(ProductConfig *thiz, const char *did, const char *name, const char *ip, const char *setupCode);
 
 
 TINY_END_DECLS

@@ -31,7 +31,7 @@ static void _loop(void *param)
     }
 }
 
-TinyRet StartHomeKit(Device *device, uint16_t *port)
+TinyRet StartHomeKit(Product *product, uint16_t *port)
 {
     TinyRet ret = TINY_RET_OK;
     IotLauncher *launcher = NULL;
@@ -58,7 +58,7 @@ TinyRet StartHomeKit(Device *device, uint16_t *port)
             break;
         }
 
-        launcher = IotLauncher_NewRuntime(device, runtime, NULL, NULL, NULL);
+        launcher = IotLauncher_NewRuntime(product, runtime, NULL, NULL, NULL);
         if (launcher == NULL)
         {
             ret = TINY_RET_E_NEW;

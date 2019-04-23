@@ -18,9 +18,9 @@
 #include "S_1_AccessoryInformation.h"
 #include "S_8_Lightbulb.h"
 
-Device * Lightbulb(const char *did, const char *name, const char *ip, const char *setupCode)
+Product * Lightbulb(const char *did, const char *name, const char *ip, const char *setupCode)
 {
-    Device *thiz = NULL;
+    Product *thiz = NULL;
 
     do
     {
@@ -29,7 +29,7 @@ Device * Lightbulb(const char *did, const char *name, const char *ip, const char
             break;
         }
 
-        thiz = Device_New();
+        thiz = Product_New();
         if (thiz == NULL)
         {
             break;
@@ -38,16 +38,16 @@ Device * Lightbulb(const char *did, const char *name, const char *ip, const char
         thiz->onGet = OnPropertyGet;
         thiz->onSet = OnPropertySet;
 
-        if (RET_FAILED(TinyList_AddTail(&thiz->services, S_1_AccessoryInformation())))
+        if (RET_FAILED(TinyList_AddTail(&thiz->device.services, S_1_AccessoryInformation())))
         {
-            Device_Delete(thiz);
+            Product_Delete(thiz);
             thiz = NULL;
             break;
         }
 
-        if (RET_FAILED(TinyList_AddTail(&thiz->services, S_8_Lightbulb())))
+        if (RET_FAILED(TinyList_AddTail(&thiz->device.services, S_8_Lightbulb())))
         {
-            Device_Delete(thiz);
+            Product_Delete(thiz);
             thiz = NULL;
             break;
         }
