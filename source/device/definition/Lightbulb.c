@@ -17,6 +17,7 @@
 #include "../initializer/InitializeConfiguration.h"
 #include "S_1_AccessoryInformation.h"
 #include "S_8_Lightbulb.h"
+#include "S_11_HapProtocolInformation.h"
 
 Product * Lightbulb(const char *did, const char *name, const char *ip, const char *setupCode)
 {
@@ -46,6 +47,13 @@ Product * Lightbulb(const char *did, const char *name, const char *ip, const cha
         }
 
         if (RET_FAILED(TinyList_AddTail(&thiz->device.services, S_8_Lightbulb())))
+        {
+            Product_Delete(thiz);
+            thiz = NULL;
+            break;
+        }
+
+        if (RET_FAILED(TinyList_AddTail(&thiz->device.services, S_11_HapProtocolInformation())))
         {
             Product_Delete(thiz);
             thiz = NULL;

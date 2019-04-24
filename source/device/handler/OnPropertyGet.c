@@ -11,9 +11,11 @@
 */
 
 #include "OnPropertyGet.h"
+#include <status/HapStatus.h>
 #include "../iid/IID.h"
 #include "S_1_AccessoryInformation/S_1_AccessoryInformation_doGet.h"
 #include "S_8_Lightbulb/S_8_Lightbulb_doGet.h"
+#include "S_11_HapProtocolInformation/S_11_HapProtocolInformation_doGet.h"
 
 void OnPropertyGet(PropertyOperation *o)
 {
@@ -29,7 +31,12 @@ void OnPropertyGet(PropertyOperation *o)
             S_8_Lightbulb_doGet(o);
             break;
 
+        case IID_11_HapProtocolInformation:
+            S_11_HapProtocolInformation_doGet(o);
+            break;
+
         default:
+            o->status = HAP_OUT_OF_RESOURCES;
             break;
     }
 }

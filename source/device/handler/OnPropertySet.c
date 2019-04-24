@@ -11,10 +11,12 @@
 */
 
 #include "OnPropertySet.h"
+#include <status/HapStatus.h>
 #include "../iid/IID.h"
 #include "../print/PrintValue.h"
 #include "S_1_AccessoryInformation/S_1_AccessoryInformation_doSet.h"
 #include "S_8_Lightbulb/S_8_Lightbulb_doSet.h"
+#include "S_11_HapProtocolInformation/S_11_HapProtocolInformation_doSet.h"
 
 void OnPropertySet(PropertyOperation *o)
 {
@@ -31,7 +33,12 @@ void OnPropertySet(PropertyOperation *o)
             S_8_Lightbulb_doSet(o);
             break;
 
+        case IID_11_HapProtocolInformation:
+            S_11_HapProtocolInformation_doSet(o);
+            break;
+
         default:
+            o->status = HAP_OUT_OF_RESOURCES;
             break;
     }
 }

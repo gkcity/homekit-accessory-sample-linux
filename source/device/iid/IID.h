@@ -26,5 +26,8 @@
 #define IID_8_9_On                                                            9
 #define IID_8_10_Brightness                                                   10
 
+#define IID_11_HapProtocolInformation                                         11
+#define IID_11_12_Version                                                     12
+
 
 #endif /* __IID_H__ */

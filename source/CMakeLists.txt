@@ -28,6 +28,10 @@ SET(DEVICE_SRC
         device/definition/P_8_9_On.c
         device/definition/P_8_10_Brightness.h
         device/definition/P_8_10_Brightness.c
+        device/definition/S_11_HapProtocolInformation.h
+        device/definition/S_11_HapProtocolInformation.c
+        device/definition/P_11_12_Version.h
+        device/definition/P_11_12_Version.c
         device/handler/OnPropertyGet.h
         device/handler/OnPropertyGet.c
         device/handler/OnPropertySet.h
@@ -40,6 +44,10 @@ SET(DEVICE_SRC
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doGet.c
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.h
         device/handler/S_8_Lightbulb/S_8_Lightbulb_doSet.c
+        device/handler/S_11_HapProtocolInformation/S_11_HapProtocolInformation_doSet.h
+        device/handler/S_11_HapProtocolInformation/S_11_HapProtocolInformation_doSet.c
+        device/handler/S_11_HapProtocolInformation/S_11_HapProtocolInformation_doGet.h
+        device/handler/S_11_HapProtocolInformation/S_11_HapProtocolInformation_doGet.c
         device/initializer/InitializeConfiguration.h
         device/initializer/InitializeConfiguration.c
         device/print/PrintValue.h
